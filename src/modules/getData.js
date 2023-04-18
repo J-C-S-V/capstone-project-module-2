@@ -1,10 +1,13 @@
+import displayItems from './displayItems.js';
+
 const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 const main = document.querySelector('.main');
 
 // const userInput = document.querySelector('body');
 
-export default function getData() {
-  fetch(url)
+let likes = 0;
+export default async function getData() {
+  await fetch(url)
     .then((res) => res.json())
     .then((data) => {
       for (let i = 0; i < data.meals.length; i += 1) {
@@ -19,7 +22,7 @@ export default function getData() {
         />
         <h2 class="title">${myMeal.strMeal}</h2>
         <span class="thumbs-up">👍</span>
-        <p class="likes">5 likes</p>
+        <p class="likes">${likes} likes</p>
         <div class="buttons">
           <button class="buttons__comments">comments</button>
           <button class="buttons__reservation">reservation</button>
@@ -27,26 +30,13 @@ export default function getData() {
       </div>`;
       }
     });
+  function updateLikes() {
+    for (let likes = 0; likes < 100; likes += 1) {
+      const likeButton = document.querySelectorAll('.thumbs-up');
+
+      likeButton.forEach((element) => {
+        element.addEventListener('click', updateLikes);
+      });
+    }
+  }
 }
-
-// for (let i = 0; i < data.meals.length; i += 1) {
-//   const myMeal = data.meals[i];
-
-//   main.append(myMeal.strMeal);
-
-//   main.innerHTML = `      <div>
-//   <img
-//     class="img"
-//     src="${myMeal.strMealThumb}"
-//     alt="${myMeal.strMeal}"
-//   />
-//   <h2 class="title">${myMeal.strMeal}</h2>
-// </div>`;
-// }
-
-// console.log(data.meals.length);
-// console.log(data);
-// console.log(myMeal);
-// console.log(myMeal.strMealThumb);
-// console.log(myMeal.strMeal);
-// console.log(myMeal.strCategory);
