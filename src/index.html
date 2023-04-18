@@ -4,40 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leaderboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Food Truck</title>
   </head>
   <body>
-    <header class="header"><h1>Leaderboard</h1></header>
-    <main class="main">
-      <section class="main__section-1">
-        <div class="main__header-container">
-          <h2 class="main__h">Recent scores</h2>
-          <button class="main__button">Refresh</button>
-        </div>
-        <ul class="ul"></ul>
-      </section>
-      <section class="main__section-2">
-        <h2 class="main__h">Add your score</h2>
-        <form class="form" onsubmit="return false">
-          <input
-            class="form__element form__element--name"
-            type="text"
-            name="user"
-            placeholder="Your name"
-            required
-          />
-          <input
-            class="form__element form__element--score"
-            type="number"
-            name="score"
-            placeholder="Your score"
-            required
-          />
-          <button class="form__element form__button" type="submit">
-            Submit
-          </button>
-        </form>
-      </section>
-    </main>
+    <header>
+      <a href="#"><img src="./assets/food-truck.png" alt="food-truck-icon" id="logo"></a>
+      
+      <ul id="header-List">
+        <li class="list-Item">Search</li>
+        <li class="list-Item">Menu</li>
+        <li class="list-Item">About Us</li>
+      </ul>
+    </header>
   </body>
 </html>

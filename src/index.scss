@@ -1,27 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
-
-$primary-maroon: #831843;
-$secondary-maroon: #9d174d;
-$third-maroon: #ff69b4;
-$primary-white: #b2b2b2;
-$primary-grey: #1b1245;
-$primary-font: 'Chivo Mono', sans-serif;
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  background-color: lightgray;
+  font-family: 'Chivo Mono', monospace;
 }
 
-html {
-  font-size: 62.5%;
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 4rem;
 }
 
-body {
-  font-size: 2rem;
-  font-family: $primary-font;
-  margin: auto 10%;
-  color: $primary-white;
+#logo {
+  cursor: pointer;
+  width: 4.5rem;
+  transition: 200ms ease-in-out;
+}
+
+#logo:hover {
+  transform: translateX(1.5rem)
+}
+
+#header-List {
+  display: flex;
+  gap: 50px;
+}
+
+.list-Item {
+  height: 1.3rem;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.list-Item:hover {
+  transform: scale(1.1);
+  border-bottom: 2px solid lightcoral;
 }
