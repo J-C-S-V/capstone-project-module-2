@@ -89,3 +89,40 @@ header {
 .footer__creators:hover {
   text-decoration: underline;
 }
+
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 3px solid $primary-maroon;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin: 10px;
+}
+
+.cards-container {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: $primary-grey;
+}
+
+.buttons__comments,
+.buttons__reservation {
+  padding: 10px;
+}
+
+.footer__creators:hover {
+  text-decoration: underline;
+}
