@@ -25,3 +25,10 @@ body {
   margin: auto 10%;
   color: $primary-white;
 }
+
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 3px solid $primary-maroon;
+}
