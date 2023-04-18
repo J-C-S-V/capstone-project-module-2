@@ -13,6 +13,7 @@ $primary-font: 'Chivo Mono', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 html {
@@ -57,4 +58,8 @@ body {
 .buttons__comments,
 .buttons__reservation {
   padding: 10px;
+
+.footer__creators:hover {
+  text-decoration: underline;
+
 }
