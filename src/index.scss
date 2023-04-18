@@ -13,6 +13,7 @@ $primary-font: 'Chivo Mono', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 html {
@@ -24,4 +25,13 @@ body {
   font-family: $primary-font;
   margin: auto 10%;
   color: $primary-white;
+}
+
+.main__container {
+  height: 80vh;
+  background-color: $primary-grey;
+}
+
+.footer__creators:hover {
+  text-decoration: underline;
 }
