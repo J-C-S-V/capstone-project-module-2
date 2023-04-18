@@ -53,6 +53,14 @@ header {
   border-bottom: 2px solid lightcoral;
 }
 
+/* <-------------------------------MAIN----------------------> */
+main {
+  font-size: 20px;
+  font-family: $primary-font;
+  margin: auto 10%;
+  color: $primary-white;
+}
+
 .img {
   width: 200px;
   height: 200px;
