@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'none',
   entry: './src/index.js', // Define your entry point
   output: {
     path: path.resolve(__dirname, 'dist'), // Define the output directory
@@ -25,6 +26,14 @@ module.exports = {
           'css-loader', // translates CSS into CommonJS
           'sass-loader', // compiles Sass to CSS
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.html$/,
+        use: 'html-loader',
       },
     ],
   },
