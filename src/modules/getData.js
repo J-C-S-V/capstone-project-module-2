@@ -2,7 +2,7 @@
 
 const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 const main = document.querySelector('.main');
-let likes = 0;
+const likes = 0;
 
 // Get data from theMealDB API
 const getData = async () => {
