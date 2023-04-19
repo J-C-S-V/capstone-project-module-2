@@ -1,14 +1,16 @@
-const id = 'NakiP3aQSm2xRejtX0k2';
+// const id = 'NakiP3aQSm2xRejtX0k2';
+
 const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 const main = document.querySelector('.main');
-
 let likes = 0;
+
+// Get data from theMealDB API
 const getData = async () => {
   await fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      for (let i = 0; i < 3; i += 1) {
-        // for (let i = 0; i < data.meals.length; i += 1) {
+      // for (let i = 0; i < 3; i += 1) {
+      for (let i = 0; i < data.meals.length; i += 1) {
         const myMeal = data.meals[i];
         // console.log(myMeal.idMeal);
 
@@ -28,14 +30,6 @@ const getData = async () => {
                 </div>
               </div>`;
       }
-      // const likesButtons = document.querySelectorAll(`.${myMeal.idMeal}`);
-      // for (let j = 0; j < likesButtons.length; j += 1) {
-      //   likesButtons[j].addEventListener('click', () => {
-      //     likesButtons[
-      //       j
-      //     ].previousElementSibling.textContent = `${++likes} likes`;
-      //   });
-      // }
     });
 };
 
