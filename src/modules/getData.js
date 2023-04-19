@@ -23,7 +23,7 @@ const getData = async () => {
             alt="${myMeal.strMeal}"
           />
           <h2 class="title">${myMeal.strMeal}</h2>
-          <span class="thumbs-up">👍</span>
+          <span class="thumbs-up ${myMeal.idMeal}">👍</span>
           <p class="likes">5 likes</p>
           <div class="buttons">
             <button class="buttons__comments">comments</button>
