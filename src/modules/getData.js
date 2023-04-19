@@ -2,13 +2,17 @@ import showPopup from './showpopup.js';
 
 const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 const main = document.querySelector('.main');
+const likes = 0;
 
-export default function getData() {
-  fetch(url)
+// Get data from theMealDB API
+const getData = async () => {
+  await fetch(url)
     .then((res) => res.json())
     .then((data) => {
+      // for (let i = 0; i < 3; i += 1) {
       for (let i = 0; i < data.meals.length; i += 1) {
         const myMeal = data.meals[i];
+        // console.log(myMeal.idMeal);
 
         const card = document.createElement('div');
         card.classList.add('cards-container');

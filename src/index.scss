@@ -190,3 +190,14 @@ main {
 .footer__creators:hover {
   text-decoration: underline;
 }
+
+.thumbs-up {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.thumbs-up:hover {
+  cursor: pointer;
+  background-color: $secondary-maroon;
+  border-radius: 5px;
+}
