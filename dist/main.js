@@ -310,8 +310,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  list-style: none;\n  background-color: lightgray;\n  font-family: 'Chivo Mono', monospace; }\n\nheader {\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  height: 4rem; }\n\n#logo {\n  cursor: pointer;\n  width: 4.5rem;\n  transition: 200ms ease-in-out; }\n\n#logo:hover {\n  transform: translateX(1.5rem); }\n\n#header-List {\n  display: flex;\n  gap: 50px; }\n\n.list-Item {\n  height: 1.3rem;\n  transition: 300ms ease-in-out;\n  cursor: pointer; }\n\n.list-Item:hover {\n  transform: scale(1.1);\n  border-bottom: 2px solid lightcoral; }\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* <-----------------------------Globals-------------------------> */\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  text-decoration: none;\n  list-style: none;\n  font-style: \"Chivo Mono\", sans-serif; }\n\n/* <----------------------------HEADER------------------------> */\nheader {\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  height: 4rem; }\n\nheader img {\n  cursor: pointer;\n  width: 4.5rem;\n  transition: 200ms ease-in-out; }\n\nheader img:hover {\n  transform: translateX(1.5rem); }\n\nheader ul {\n  display: flex;\n  gap: 50px; }\n\nheader li {\n  height: 1.3rem;\n  transition: 300ms ease-in-out;\n  cursor: pointer;\n  color: #1b1245; }\n\nheader li:hover {\n  transform: scale(1.1);\n  border-bottom: 2px solid lightcoral; }\n\n/* <-------------------------------MAIN----------------------> */\nmain {\n  font-size: 20px;\n  font-family: \"Chivo Mono\", sans-serif;\n  margin: auto 10%;\n  color: #b2b2b2; }\n\n.img {\n  width: 200px;\n  height: 200px;\n  border-radius: 10px;\n  border: 3px solid #831843; }\n\n.main {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around; }\n\n.buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  align-items: center;\n  margin: 10px; }\n\n.cards-container {\n  margin: 10px;\n  border-radius: 10px;\n  padding: 1rem;\n  background-color: #1b1245; }\n\n.buttons__comments,\n.buttons__reservation {\n  padding: 10px; }\n\n.footer__creators:hover {\n  text-decoration: underline; }\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -416,6 +417,30 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
+/***/ }),
+/* 11 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ getData)
+/* harmony export */ });
+var url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
+var main = document.querySelector('.main');
+
+// const userInput = document.querySelector('body');
+
+function getData() {
+  fetch(url).then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    for (var i = 0; i < data.meals.length; i += 1) {
+      var myMeal = data.meals[i];
+      main.innerHTML += "\n      <div class=\"cards-container\">\n        <img\n          class=\"img\"\n          src=\"".concat(myMeal.strMealThumb, "\"\n          alt=\"").concat(myMeal.strMeal, "\"\n        />\n        <h2 class=\"title\">").concat(myMeal.strMeal, "</h2>\n        <span class=\"thumbs-up\">\uD83D\uDC4D</span>\n        <p class=\"likes\">5 likes</p>\n        <div class=\"buttons\">\n          <button class=\"buttons__comments\">comments</button>\n          <button class=\"buttons__reservation\">reservation</button>\n        </div>\n      </div>");
+    }
+  });
+}
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -495,7 +520,10 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _modules_getData_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 
+
+(0,_modules_getData_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
 })();
 
 /******/ })()

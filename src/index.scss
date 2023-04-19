@@ -27,28 +27,29 @@ header {
   height: 4rem;
 }
 
-#logo {
+header img {
   cursor: pointer;
   width: 4.5rem;
   transition: 200ms ease-in-out;
 }
 
-#logo:hover {
+header img:hover {
   transform: translateX(1.5rem);
 }
 
-#header-List {
+header ul {
   display: flex;
   gap: 50px;
 }
 
-.list-Item {
+header li {
   height: 1.3rem;
   transition: 300ms ease-in-out;
   cursor: pointer;
+  color: $primary-grey;
 }
 
-.list-Item:hover {
+header li:hover {
   transform: scale(1.1);
   border-bottom: 2px solid lightcoral;
 }

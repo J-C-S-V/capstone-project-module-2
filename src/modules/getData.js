@@ -28,25 +28,3 @@ export default function getData() {
       }
     });
 }
-
-// for (let i = 0; i < data.meals.length; i += 1) {
-//   const myMeal = data.meals[i];
-
-//   main.append(myMeal.strMeal);
-
-//   main.innerHTML = `      <div>
-//   <img
-//     class="img"
-//     src="${myMeal.strMealThumb}"
-//     alt="${myMeal.strMeal}"
-//   />
-//   <h2 class="title">${myMeal.strMeal}</h2>
-// </div>`;
-// }
-
-// console.log(data.meals.length);
-// console.log(data);
-// console.log(myMeal);
-// console.log(myMeal.strMealThumb);
-// console.log(myMeal.strMeal);
-// console.log(myMeal.strCategory);
