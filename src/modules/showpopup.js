@@ -1,3 +1,5 @@
+import getComments from './getComments.js';
+
 const popupDetails = document.querySelector('.popup-details');
 const closePopup = document.getElementById('close-button-popup');
 
@@ -16,8 +18,7 @@ export default function showPopup(myMeal) {
       <div class="popup-comments">
         <h3 class="comments-conter">Comments (2)</h3>
         <ul class="comments-box">
-          <li class="comments">coment 1</li>
-          <li class="comments">coment 2</li>
+
         </ul>
       </div>
   
@@ -43,6 +44,9 @@ export default function showPopup(myMeal) {
 
   popupDetails.innerHTML = html;
   popupDetails.parentElement.classList.add('showPopup');
+
+  // Call getComments to fetch comments
+  getComments();
 }
 
 // Event listener
