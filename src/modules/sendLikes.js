@@ -1,11 +1,12 @@
-const sendLikes = () => {
+import getLikes from './getLikes.js';
+
+const sendLikes = async () => {
   const parentElement = document.querySelector('.main');
-  parentElement.addEventListener('click', (e) => {
+  parentElement.addEventListener('click', async (e) => {
     if (e.target.classList.contains('thumbs-up')) {
       console.log('sendlikesjs', e.target.classList[1]);
       const id = e.target.classList[1];
-      // add your API call code here
-      fetch(
+      await fetch(
         'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/NakiP3aQSm2xRejtX0k2/likes',
         {
           method: 'POST',
@@ -15,9 +16,10 @@ const sendLikes = () => {
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
           },
-        }
+        },
       );
     }
+    getLikes();
   });
 };
 

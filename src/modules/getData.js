@@ -10,8 +10,9 @@ const getData = async () => {
   await fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      for (let i = 0; i < 3; i += 1) {
-        // for (let i = 0; i < data.meals.length; i += 1) {
+      console.log('primero :v');
+      // for (let i = 0; i < 3; i += 1) {
+      for (let i = 0; i < data.meals.length; i += 1) {
         const myMeal = data.meals[i];
         // console.log(myMeal.idMeal);
 
@@ -40,6 +41,8 @@ const getData = async () => {
         main.appendChild(card);
       }
     });
+
+  getLikes();
 };
 
 export default getData;

@@ -1,5 +1,4 @@
-const url =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
 
 const options = {
   method: 'POST',
