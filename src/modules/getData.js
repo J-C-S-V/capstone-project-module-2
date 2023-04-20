@@ -1,5 +1,6 @@
 import showPopup from './showpopup.js';
 import getLikes from './getLikes.js';
+import displayTotalItems from './displayTotalItems.js';
 
 const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 const main = document.querySelector('.main');
@@ -43,6 +44,7 @@ const getData = async () => {
     });
 
   getLikes();
+  displayTotalItems();
 };
 
 export default getData;
