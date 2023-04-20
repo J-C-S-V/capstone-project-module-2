@@ -1,16 +1,28 @@
-// import sum from '../modules/displayTotalItems.js';
-
-// test('adds 1 + 2 to equal 3', () => {
-//   expect(sum(1, 2)).toBe(3);
-// });
-
 import displayTotalItems from '../modules/displayTotalItems.js';
+import { JSDOM } from 'jsdom';
+import '@testing-library/jest-dom';
 
-test('Counts the number of items in the list', () => {
-  document.body.innerHTML = `
-          <span class="thumbs-up 52977">👍</span>
-          <span class="thumbs-up 53060">👍</span>
-          <span class="thumbs-up 53065">👍</span>
-  `;
-  expect(displayTotalItems()).toBe(3);
+// Set up a basic DOM environment using JSDOM
+const dom = new JSDOM('<html><body></body></html>');
+global.document = dom.window.document;
+
+describe('displayTotalItems', () => {
+  beforeEach(() => {
+    document.body.innerHTML = `
+      <ul class="list-Item-items"></ul>
+      <div class="cards-container">
+        <span class="thumbs-up"></span>
+        <span class="thumbs-up"></span>
+        <span class="thumbs-up"></span>
+      </div>
+      <div class="cards-container">
+        <span class="thumbs-up"></span>
+        <span class="thumbs-up"></span>
+      </div>
+    `;
+  });
+
+  test('returns the correct number of items', () => {
+    expect(displayTotalItems()).toBe(5);
+  });
 });

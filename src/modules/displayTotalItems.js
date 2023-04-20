@@ -6,8 +6,3 @@ function displayTotalItems() {
 }
 
 export default displayTotalItems;
-
-// function sum(a, b) {
-//   return a + b;
-// }
-// export default sum;
