@@ -1,5 +1,7 @@
-import displayTotalItems from '../modules/displayTotalItems.js';
 import { JSDOM } from 'jsdom';
+import displayTotalItems from '../modules/displayTotalItems.js';
+
+// rest of the code...
 
 // Set up a basic DOM environment using JSDOM
 const dom = new JSDOM('<html><body></body></html>');
