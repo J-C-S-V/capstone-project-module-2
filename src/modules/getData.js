@@ -12,8 +12,8 @@ const getData = async () => {
     .then((res) => res.json())
     .then((data) => {
       console.log('primero :v');
-      // for (let i = 0; i < 3; i += 1) {
-      for (let i = 0; i < data.meals.length; i += 1) {
+      for (let i = 0; i < 3; i += 1) {
+        // for (let i = 0; i < data.meals.length; i += 1) {
         const myMeal = data.meals[i];
         // console.log(myMeal.idMeal);
 
