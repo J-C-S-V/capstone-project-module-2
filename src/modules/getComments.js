@@ -1,3 +1,5 @@
+import displayTotalComments from './count-comments.js';
+
 // GET Comments
 const getComments = async () => {
   const response = await fetch(
@@ -11,6 +13,7 @@ const getComments = async () => {
   );
   const commentsString = commentsHTML.join('');
   commentsBox.innerHTML = commentsString;
+  displayTotalComments();
 };
 
 export default getComments;
