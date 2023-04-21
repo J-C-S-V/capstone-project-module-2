@@ -85,7 +85,7 @@ Overall, the recipe search web app demonstrates a solid understanding of JavaScr
 
 ## 🚀 Live demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://j-c-s-v.github.io/webpack-to-do-list/)
+- [Live Demo Link](https://development--friendly-strudel-5e52a8.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
