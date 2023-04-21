@@ -1,24 +1,25 @@
 {
-  "name": "webpack-to-do-list-",
+  "name": "capstone-project-module-2",
   "version": "1.0.0",
   "description": "<div align=\"center\">\r   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->\r   <img src=\"murple_logo.png\" alt=\"logo\" width=\"140\"  height=\"auto\" />\r   <br/>",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --open --mode development",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/J-C-S-V/webpack-to-do-list-.git"
+    "url": "git+https://github.com/J-C-S-V/capstone-project-module-2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/J-C-S-V/webpack-to-do-list-/issues"
+    "url": "https://github.com/J-C-S-V/capstone-project-module-2/issues"
   },
-  "homepage": "https://github.com/J-C-S-V/webpack-to-do-list-#readme",
+  "homepage": "https://github.com/J-C-S-V/capstone-project-module-2#readme",
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
