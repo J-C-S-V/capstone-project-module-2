@@ -1,4 +1,5 @@
 import getComments from './getComments.js';
+import postData from './postComments.js';
 
 const popupDetails = document.querySelector('.popup-details');
 const closePopup = document.getElementById('close-button-popup');
@@ -25,8 +26,8 @@ export default function showPopup(myMeal) {
       <!-- add comment -->
       <div class="add-comment-container">
         <h3 class="add-comment-title">Add Comment</h3>
-        <form action="#" method="post" class="commnets-inputs">
-          <input type="text" name="name" id="Name" placeholder="Your Name" />
+        <form class="commnets-inputs" onsubmit="return false;">
+          <input type="text" name="name" id="Name" placeholder="Your Name"/>
           <textarea
             name="insights"
             id="insights"
@@ -47,9 +48,12 @@ export default function showPopup(myMeal) {
 
   // Call getComments to fetch comments
   getComments();
+
+  const submitButton = document.querySelector('.add-comment');
+  submitButton.addEventListener('click', postData);
+  submitButton.addEventListener('click', getComments);
 }
 
-// Event listener
 closePopup.addEventListener('click', () => {
   popupDetails.parentElement.classList.remove('showPopup');
 });
