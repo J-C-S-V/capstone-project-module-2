@@ -11,7 +11,4 @@ const options = {
 };
 
 fetch(url, options)
-  .then((response) => response.json())
-  .then((json) => {
-    console.log('appidjs', json);
-  });
+  .then((response) => response.json());

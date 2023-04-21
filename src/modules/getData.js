@@ -11,8 +11,6 @@ const getData = async () => {
   await fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      // console.log('primero :v');
-      // for (let i = 0; i < 3; i += 1) {
       for (let i = 0; i < data.meals.length; i += 1) {
         const myMeal = data.meals[i];
 
@@ -37,16 +35,6 @@ const getData = async () => {
         commentsButton.addEventListener('click', () => {
           showPopup(myMeal);
         });
-
-        // let targetId;
-
-        // const commentsButton = document.querySelector('.buttons__comments');
-        // commentsButton.addEventListener('click', (e) => {
-        //   // console.log(e.target.parentNode.parentNode.children[2].classList[1]);
-        //   targetId = e.target.parentNode.parentNode.children[2].classList[1];
-        //   console.log(targetId);
-        //   // console.log('lol');
-        // });
 
         main.appendChild(card);
       }
