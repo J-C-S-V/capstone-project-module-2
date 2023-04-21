@@ -5,8 +5,6 @@ const postData = async () => {
   const name = document.getElementById('Name').value;
   const comment = document.getElementById('insights').value;
 
-  console.log('working');
-
   await fetch(
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/NakiP3aQSm2xRejtX0k2/comments',
     {

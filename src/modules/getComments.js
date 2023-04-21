@@ -6,7 +6,6 @@ const getComments = async () => {
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/NakiP3aQSm2xRejtX0k2/comments?item_id=4',
   );
   const json = await response.json();
-  console.log('getcomments', json);
   const commentsBox = document.querySelector('.comments-box');
   const commentsHTML = json.map(
     (comment) => `<li class="commentsLI">${comment.creation_date} ${comment.username}: ${comment.comment}</li>`,
