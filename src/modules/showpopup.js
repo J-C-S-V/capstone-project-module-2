@@ -17,9 +17,9 @@ export default function showPopup(myMeal) {
   
       <!-- modal comments -->
       <div class="popup-comments">
-        <h3 class="comments-conter">Comments (2)</h3>
+        <h3 class="comments-conter">Comments ()</h3>
         <ul class="comments-box">
-
+        
         </ul>
       </div>
   
@@ -49,6 +49,7 @@ export default function showPopup(myMeal) {
   // Call getComments to fetch comments
   getComments();
 
+  // Add comments
   const submitButton = document.querySelector('.add-comment');
   submitButton.addEventListener('click', postData);
   submitButton.addEventListener('click', getComments);
